@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSON LD Schema Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h1 class="title">JSON LD Schema Generator</h1>
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input type="text" class="form-control" id="productName" name="productName" />
+        </div>
+        <div class="form-group">
+          <label for="imageURL">Image URL:</label>
+          <input type="text" class="form-control" id="imageURL" name="imageURL" />
+        </div>
+        <div class="form-group">
+          <label for="brandName">Brand Name:</label>
+          <input type="text" class="form-control" id="brandName" name="brandName" />
+        </div>
+        <div class="form-group">
+          <label for="productDescription">Product Description:</label>
+          <textarea class="form-control" id="productDescription" name="productDescription"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="priceCurrency">Price Currency:</label>
+          <input type="text" class="form-control" id="priceCurrency" name="priceCurrency" />
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="text" class="form-control" id="price" name="price" />
+        </div>
+        <div class="form-group">
+          <label for="aggregateRating">Aggregate Rating:</label>
+          <input type="number" class="form-control" id="aggregateRating" name="aggregateRating" />
+        </div>
+        <div class="form-group">
+          <label for="numberOfRatings">Number of Ratings:</label>
+          <input type="number" class="form-control" id="numberOfRatings" name="numberOfRatings" />
+        </div>
+        <div class="form-group">
+          <label for="highestRatingValue">Highest Rating Value:</label>
+          <input type="number" class="form-control" id="highestRatingValue" name="highestRatingValue" />
+        </div>
+        <div class="form-group">
+          <label for="lowestRatingValue">Lowest Rating Value:</label>
+          <input type="number" class="form-control" id="lowestRatingValue" name="lowestRatingValue" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="generateJSONLD()">Generate JSON LD</button>
+        <button type="button" class="btn btn-secondary" id="copyJSONLD" onclick="copyJSONLDToClipboard()" disabled>Copy JSON LD</button>
+      </form>
+      <div id="jsonlddata" class="json-ld-data"></div>
+    </div>
+    <form class="dev-tools">
+      <h2 class="title">Developer Tools</h2>
+      <div class="form-group">
+        <label for="emailAddress">Email Address:</label>
+        <input type="email" class="form-control" id="emailAddress" name="emailAddress" />
+      </div>
+      <button type="button" class="btn btn-secondary" onclick="emailCodeToDeveloper()">Email Code to Developer</button>
+    </form>
+  </body>
+</html>
